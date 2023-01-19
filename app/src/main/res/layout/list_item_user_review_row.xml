@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="userReview"
+            type="com.envious.domain.model.UserReview"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textAuthor"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textSize="10sp"
+            android:layout_marginTop="14dp"
+            android:text="@{userReview.author}"
+            tools:text="sdfdsf"
+            tools:ignore="SmallSp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textCreatedAt"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textAuthor"
+            android:layout_marginTop="14dp"
+            android:textSize="10sp"
+            android:text="@{userReview.createdAt}"
+            tools:text = "30 january 2023"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textContent"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textCreatedAt"
+            android:layout_marginTop="14dp"
+            android:textSize="10sp"
+            android:text="@{userReview.content}"
+            android:lines="10"
+            tools:text="The film American Beauty to me is a film about purpose. What is your purpose in life? The film teaches that there is such great beauty in the small things in life and that sometimes you need to take a step back to allow yourself to take in the unfiltered beauty in the small things like a plastic bag dancing in the wind, playing with the leaves. The film tells it's audience that the beauty in the small details is much greater than society's typical image of beauty. The prominent rose in the film is a symbol of false, surface beauty; the expensive and romantic flower is amongst almost every single shot in the film reminding us that we need to look beyond the surface beauty of an entity and see the beauty within. This message surrounding beauty is empathised with the inclusion of the rose on the films poster and the tagline, 'look closer' indicating that to see real beauty one must 'look closer', a task that typically requires more thoughtfulness and less immediate facial value judgements that make up the typical image of beauty."
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
